@@ -251,6 +251,12 @@ const productos = [
 // ========================
 // Función para mostrar detalle de un producto
 // ========================
+/*
+ * Muestra el detalle de un producto en un modal o contenedor.
+ * @method mostrarDetalle
+ * @param {number} id - Índice del producto dentro del arreglo `productos`.
+ * @return {void} No retorna ningún valor.
+ */
 let mostrarDetalle = (id) => {
   document.getElementById("detalle").style.display = "block"; // Muestra el modal o contenedor de detalles
   document.getElementById("titulo-prod").innerText = productos[id].nombre; // Asigna nombre del producto
@@ -262,12 +268,23 @@ let mostrarDetalle = (id) => {
 // ========================
 // Función para cerrar el modal de detalle
 // ========================
+/*
+ * Cierra el modal de detalle del producto.
+ * @method cerrarModal
+ * @return {void} No retorna ningún valor.
+ */
 let cerrarModal = () => {
   document.getElementById("detalle").style.display = "none"; // Oculta el modal
 };
 // ========================
 // Función para mostrar todos los productos en el catálogo
 // ========================
+/*
+ * Muestra en pantalla el catálogo de productos.
+ * @method mostrarCatalogo
+ * @param {Array<Object>} prod - Lista de productos a mostrar. Si no se pasa, muestra todos.
+ * @return {void} No retorna ningún valor.
+ */
 let mostrarCatalogo = (prod) => {
   if (!prod) {
     prod = productos;
@@ -291,6 +308,12 @@ let mostrarCatalogo = (prod) => {
 // ========================
 // Agregar producto al carrito (localStorage)
 // ========================
+/*
+ * Agrega un producto al carrito de compras (almacenado en localStorage).
+ * @method agregarAlcarrito
+ * @param {number} id - Índice del producto en el arreglo `productos`.
+ * @return {void} No retorna ningún valor.
+ */
 let agregarAlcarrito = (id) => {
   const listaInicial = JSON.parse(localStorage.getItem("carrito")) || []; // Recupera el carrito existente
   listaInicial.push(id); // Agrega el id del producto
@@ -300,6 +323,11 @@ let agregarAlcarrito = (id) => {
 // ========================
 // Mostrar el carrito con productos seleccionados
 // ========================
+/*
+ * Muestra los productos actualmente en el carrito.
+ * @method mostrarCarrito
+ * @return {void} No retorna ningún valor.
+ */
 let mostrarCarrito = () => {
   let contenido = "";
   let total = 0;
@@ -340,6 +368,11 @@ let mostrarCarrito = () => {
 // ========================
 // Vaciar el carrito completamente
 // ========================
+/*
+ * Vacía completamente el carrito de compras.
+ * @method vaciarCarrito
+ * @return {void} No retorna ningún valor.
+ */
 let vaciarCarrito = () => {
   localStorage.removeItem("carrito"); // Elimina el carrito
   contarProductos(); // Reinicia contador
@@ -348,6 +381,12 @@ let vaciarCarrito = () => {
 // ========================
 // Eliminar solo un producto del carrito
 // ========================
+/*
+ * Elimina una sola unidad de un producto del carrito.
+ * @method eliminarProducto
+ * @param {number} indexEnLista - Índice del producto dentro de la lista del carrito mostrado.
+ * @return {void} No retorna ningún valor.
+ */
 let eliminarProducto = (indexEnLista) => {
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   if (carrito.length === 0) return;
@@ -379,6 +418,11 @@ let eliminarProducto = (indexEnLista) => {
 // ========================
 // Filtro de productos por nombre, precio, categoría y marca
 // ========================
+/*
+ * Filtra productos por nombre, precio, categoría o marca.
+ * @method filtrarProducto
+ * @return {void} No retorna ningún valor.
+ */
 let filtrarProducto = () => {
   let searchWord = document.getElementById("search").value.toLowerCase();
   let min = document.getElementById("price-min").value || 0;
@@ -424,6 +468,12 @@ let filtrarProducto = () => {
 // ========================
 // Formatear precio a moneda local (USD en formato argentino)
 // ========================
+/*
+ * Formatea un número como precio en formato USD (localizado en español de Argentina).
+ * @method formatPrice
+ * @param {number} price - Valor numérico del precio.
+ * @return {string} Precio formateado como moneda.
+ */
 let formatPrice = (price) => {
   return new Intl.NumberFormat("es-AR", {
     style: "currency",
@@ -433,6 +483,11 @@ let formatPrice = (price) => {
 // ========================
 // Contar cantidad de productos en carrito
 // ========================
+/*
+ * Muestra la cantidad total de productos en el carrito.
+ * @method contarProductos
+ * @return {void} No retorna ningún valor.
+ */
 let contarProductos = () => {
   const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   document.getElementById("cant-prod").innerText = carrito.length; // Muestra cantidad
@@ -440,6 +495,11 @@ let contarProductos = () => {
 // ========================
 // Ordenar catálogo según opción seleccionada
 // ========================
+/*
+ * Ordena el catálogo según la opción seleccionada (precio o nombre).
+ * @method orderCatalog
+ * @return {void} No retorna ningún valor.
+ */
 let orderCatalog = () => {
   const opt = document.getElementById("order").value;
   let newProductos = [...productos]; // Copia del array original
@@ -465,6 +525,11 @@ let orderCatalog = () => {
 // ========================
 // Validar formulario de contacto
 // ========================
+/*
+ * Valida los campos del formulario de contacto.
+ * @method validarFormulario
+ * @return {void} No retorna ningún valor.
+ */
 let validarFormulario = () => {
   const nombre = document.getElementById("nombre").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -491,6 +556,11 @@ let validarFormulario = () => {
 // ========================
 // Calcular cuota mensual de financiación
 // ========================
+/*
+ * Calcula la cuota mensual de financiación según monto y plazo.
+ * @method calcularCuota
+ * @return {void} No retorna ningún valor.
+ */
 let calcularCuota = () => {
   const monto = parseFloat(document.getElementById("monto").value) || 0;
   const meses = parseInt(document.getElementById("meses").value) || 12;
