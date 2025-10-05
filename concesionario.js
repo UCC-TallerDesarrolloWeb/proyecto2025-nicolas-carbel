@@ -438,7 +438,8 @@ function validarFormulario() {
                 document.getElementById("form-resultado").innerText = "Por favor, ingresa un email válido.";
                 return;
             }
-            document.getElementById("form-resultado").innerText = "Mensaje enviado con éxito.";
+            document.getElementById("form-resultado2").innerText = "Mensaje enviado con éxito.";
+            document.getElementById("form-resultado").innerText = "";
             document.getElementById("contact-form").reset();
         }
 
