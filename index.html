@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Hace que el diseño sea adaptable a diferentes tamaños de pantalla -->
     <title>Concesionario de Autos de Lujo - Nova Motors</title>
     <meta name="author" content="Nicolas Tiziano, Carbel Samir" />
     <meta
@@ -25,8 +25,8 @@
     />
     <script src="concesionario.js" defer></script>
   </head>
-  <body class="grid-container" onload="mostrarCatalogo() ; contarProductos()">
-    <header class="hero">
+  <body onload="mostrarCatalogo() ; contarProductos()"> <!-- funciones que se ejecutan al cargar la página -->
+    <header class="hero"> <!-- Sección superior del sitio -->
       <div class="header-content">
         <img
           src="imagenes/Logo de Nova Motors.png"
@@ -37,7 +37,7 @@
         <p>Experimenta la excelencia en cada curva</p>
       </div>
     </header>
-    <nav class="main-nav">
+    <nav class="main-nav"> <!-- Barra de navegación principal -->
       <a href="index.html" class="nav-link">CATÁLOGO DE AUTOS</a>
       <a href="financiacion.html" class="nav-link">FINANCIACIÓN</a>
       <a href="contacto.html" class="nav-link">CONTACTO</a>
@@ -45,10 +45,10 @@
         >CARRITO DE COMPRAS <span id="cant-prod">0</span></a
       >
     </nav>
-    <div class="container">
-      <aside class="filters" aria-label="Filtros de catálogo de autos">
+    <div class="container">  <!-- Contenedor principal que incluye filtros y catálogo -->
+      <aside class="filters" aria-label="Filtros de catálogo de autos">  <!-- Filtros -->
         <h2>Filtros</h2>
-        <div class="filter-section">
+        <div class="filter-section"> <!-- Filtro de búsqueda -->
           <h3>Búsqueda</h3>
           <label for="search">Buscar:</label>
           <input
@@ -59,7 +59,7 @@
             oninput="filtrarProducto()"
           />
         </div>
-        <div class="filter-section">
+        <div class="filter-section"> <!-- Filtro de precios -->
           <h3>Precios</h3>
           <label for="price-min">Mínimo:</label>
           <input
@@ -78,7 +78,7 @@
             oninput="filtrarProducto()"
           />
         </div>
-        <div class="filter-section">
+        <div class="filter-section"> <!-- Filtro por tipo de auto -->
           <h3>Tipos de autos</h3>
           <label for="deportivos"
             ><input
@@ -117,7 +117,7 @@
             Hiperdeportivos</label
           >
         </div>
-        <div class="filter-section">
+        <div class="filter-section"> <!-- Selector para ordenar los resultados -->
           <label for="order"><h3>Ordenar por:</h3></label>
           <select id="order" onchange="orderCatalog()">
             <option value="" disabled selected>Seleccione un orden</option>
@@ -127,7 +127,7 @@
             <option value="z-a">Nombre: Z-A</option>
           </select>
         </div>
-        <div class="filter-section">
+        <div class="filter-section"> <!-- Selector por marca -->
           <label for="marca"><h3>Marca</h3></label>
           <select id="marca" onchange="filtrarProducto()">
             <option value="Todas">Todas</option>
@@ -161,7 +161,7 @@
         <!-- Catálogo dinámico generado por JS -->
       </main>
     </div>
-    <div id="detalle" class="modal">
+    <div id="detalle" class="modal">  <!-- Ventana modal para mostrar detalles de un producto -->
       <div class="modal-content">
         <h2 id="titulo-prod"></h2>
         <p id="descr-prod"></p>
@@ -169,7 +169,7 @@
         <button type="button" onclick="cerrarModal()">Cerrar</button>
       </div>
     </div>
-    <footer class="main-footer">
+    <footer class="main-footer">  <!-- Pie de página con información de contacto -->
       <p>Contacto: <a href="">info@novamotors.com</a> | Tel: +54 351 123456</p>
     </footer>
   </body>

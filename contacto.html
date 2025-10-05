@@ -16,8 +16,8 @@
     />
     <script src="concesionario.js" defer></script>
   </head>
-  <body onload="contarProductos()">
-    <header class="hero">
+  <body onload="contarProductos()"> <!-- Al cargar la página, se ejecuta contarProductos() -->
+    <header class="hero">  <!-- encabezado principal -->
       <div class="header-content">
         <img
           src="imagenes/Logo de Nova Motors.png"
@@ -28,7 +28,7 @@
         <p>Estamos aquí para ayudarte a encontrar tu vehículo ideal</p>
       </div>
     </header>
-    <nav class="main-nav">
+    <nav class="main-nav"> <!-- Barra de navegación principal -->
       <a href="index.html" class="nav-link">CATÁLOGO DE AUTOS</a>
       <a href="financiacion.html" class="nav-link">FINANCIACIÓN</a>
       <a href="contacto.html" class="nav-link">CONTACTO</a>
@@ -36,12 +36,12 @@
         >CARRITO DE COMPRAS <span id="cant-prod">0</span></a
       >
     </nav>
-    <div class="container">
+    <div class="container"> <!-- Contenedor principal del contenido -->
       <main class="contact-content">
-        <section>
+        <section> 
           <h2>Contáctanos</h2>
-          <form id="contact-form">
-            <label for="nombre">Nombre:</label>
+          <form id="contact-form"> <!-- Formulario de contacto -->
+            <label for="nombre">Nombre:</label> <!-- Campo nombre -->
             <input
               type="text"
               id="nombre"
@@ -49,7 +49,7 @@
               maxlength="50"
               required
             />
-            <label for="email">Email:</label>
+            <label for="email">Email:</label> <!-- Campo email -->
             <input
               type="email"
               id="email"
@@ -57,14 +57,14 @@
               maxlength="50"
               required
             />
-            <label for="telefono">Teléfono:</label>
+            <label for="telefono">Teléfono:</label> <!-- Campo teléfono -->
             <input
               type="tel"
               id="telefono"
               placeholder="+54 123 456 789"
               maxlength="15"
             />
-            <label for="mensaje">Mensaje:</label>
+            <label for="mensaje">Mensaje:</label> <!-- Campo mensaje -->
             <textarea
               id="mensaje"
               placeholder="Tu mensaje"
@@ -73,12 +73,13 @@
             ></textarea>
             <button type="button" onclick="validarFormulario()">Enviar</button>
           </form>
+          <!-- Párrafos para mostrar resultados / errores del formulario -->
           <p id="form-resultado" style="color: red"></p>
           <p id="form-resultado2"></p>
         </section>
       </main>
     </div>
-    <footer class="main-footer">
+    <footer class="main-footer"> <!-- Pie de página con información de contacto -->
       <p>
         Contacto: <a href="mailto:info@novamotors.com">info@novamotors.com</a> |
         Tel: +54 351 123456

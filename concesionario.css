@@ -1,3 +1,6 @@
+/* -----------------------------------------------------
+   VARIABLES GLOBALES (colores y temas)
+   ----------------------------------------------------- */
 :root {
   --ferrari-red: #ff0000;
   --black: #000000;
@@ -7,7 +10,9 @@
   --muted: #666;
 }
 
-/* Reset ligero */
+/* -----------------------------------------------------
+   RESET LIGERO: quita márgenes y rellenos predeterminados
+   ----------------------------------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,14 +24,16 @@ body {
 }
 body {
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial;
-  background: var(--bg);
-  color: var(--black);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    "Helvetica Neue", Arial; /* tipografía principal */
+  background: var(--bg); /* color de fondo general */
+  color: var(--black); /* color de texto principal */
+  line-height: 1.5; /* altura de línea legible */
+  -webkit-font-smoothing: antialiased; /* suavizado de texto */
 }
 
-/* HERO */
+/* -----------------------------------------------------
+   SECCIÓN HERO: imagen principal del encabezado
+   ----------------------------------------------------- */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url("imagenes/lamborghini-aventador-svj.jpg") no-repeat center/cover;
@@ -39,7 +46,7 @@ body {
   padding: 1rem;
 }
 .header-content {
-  max-width: 1100px;
+  max-width: 1100px; /* ancho máximo del contenido */
 }
 .logo {
   width: 150px;
@@ -58,7 +65,9 @@ body {
   margin-top: 6px;
 }
 
-/* NAV */
+/* -----------------------------------------------------
+   NAVEGACIÓN PRINCIPAL (barra de menú)
+   ----------------------------------------------------- */
 .main-nav {
   background-color: var(--ferrari-red);
   padding: 12px 10px;
@@ -86,7 +95,9 @@ body {
   transform: scale(1.03);
 }
 
-/* contador carrito */
+/* -----------------------------------------------------
+   CONTADOR DEL CARRITO
+   ----------------------------------------------------- */
 #cant-prod {
   display: inline-block;
   background: var(--gold);
@@ -98,7 +109,9 @@ body {
   margin-left: 6px;
 }
 
-/* LAYOUT PRINCIPAL */
+/* -----------------------------------------------------
+   CONTENEDOR PRINCIPAL
+   ----------------------------------------------------- */
 .container {
   max-width: 1200px;
   margin: 20px auto;
@@ -108,7 +121,9 @@ body {
   align-items: flex-start;
 }
 
-/* FILTROS */
+/* -----------------------------------------------------
+   FILTROS LATERALES
+   ----------------------------------------------------- */
 .filters {
   width: 25%;
   background: var(--white);
@@ -142,7 +157,9 @@ body {
   margin-top: 6px;
 }
 
-/* CATALOGO */
+/* -----------------------------------------------------
+   CATÁLOGO DE PRODUCTOS
+   ----------------------------------------------------- */
 .catalog {
   width: 75%;
   display: grid;
@@ -165,6 +182,7 @@ body {
   transition: transform 0.18s ease, box-shadow 0.18s ease;
   min-height: 320px;
 }
+/* Cada tarjeta de producto */
 .catalog > div:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
@@ -205,7 +223,9 @@ body {
   transform: translateY(-2px);
 }
 
-/* Altura según cantidad de productos */
+/* -----------------------------------------------------
+   AJUSTE DE ALTURA SEGÚN CANTIDAD DE PRODUCTOS
+   ----------------------------------------------------- */
 #catalog.uno .catalog > div {
   height: 450px;
 }
@@ -216,7 +236,9 @@ body {
   height: auto;
 }
 
-/* FOOTER */
+/* -----------------------------------------------------
+   PIE DE PÁGINA (FOOTER)
+   ----------------------------------------------------- */
 .main-footer {
   background: var(--black);
   color: var(--white);
@@ -229,7 +251,9 @@ body {
   text-decoration: none;
 }
 
-/* MODAL */
+/* -----------------------------------------------------
+   MODAL (ventana emergente)
+   ----------------------------------------------------- */
 .modal {
   display: none;
   position: fixed;
@@ -264,7 +288,9 @@ body {
   cursor: pointer;
 }
 
-/* paginas internas */
+/* -----------------------------------------------------
+   PÁGINAS INTERNAS (carrito, financiamiento, contacto)
+   ----------------------------------------------------- */
 .cart-content,
 .financing-content,
 .contact-content {
@@ -275,7 +301,7 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* carrito */
+/* Carrito de compras */
 #carrito-content > div {
   margin-bottom: 12px;
   border-bottom: 1px solid #eee;
@@ -285,7 +311,7 @@ body {
   color: var(--ferrari-red);
 }
 
-/* formularios */
+/* Formularios de contacto */
 .contact-content form label {
   font-weight: 700;
 }
@@ -298,7 +324,9 @@ body {
   width: 100%;
 }
 
-/* UTILS */
+/* -----------------------------------------------------
+   UTILIDADES GENERALES
+   ----------------------------------------------------- */
 .btn-secondary {
   background: transparent;
   border: 1px solid #ddd;
@@ -310,7 +338,10 @@ body {
   display: none !important;
 }
 
-/* RESPONSIVE */
+/* -----------------------------------------------------
+   MEDIA QUERIES: diseño responsive
+   ----------------------------------------------------- */
+   /* Pantallas medianas */
 @media (max-width: 992px) {
   .container {
     padding: 0 14px;
@@ -323,7 +354,7 @@ body {
     width: 70%;
   }
 }
-
+/* Pantallas pequeñas (tablets y móviles) */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -368,7 +399,7 @@ body {
   }
 }
 
-/* MUY PEQUEÑOS */
+/* Pantallas muy pequeñas (celulares chicos) */
 @media (max-width: 480px) {
   .hero {
     height: 200px;

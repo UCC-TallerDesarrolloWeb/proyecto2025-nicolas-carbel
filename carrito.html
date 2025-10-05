@@ -16,8 +16,8 @@
     />
     <script src="concesionario.js" defer></script>
   </head>
-  <body onload="contarProductos() ; mostrarCarrito()">
-    <header class="hero">
+  <body onload="contarProductos() ; mostrarCarrito()"> <!-- Al cargar la página, se ejecutan las funciones que muestran el carrito y cuentan los productos -->
+    <header class="hero"> <!-- Encabezado principal con título e imagen -->
       <div class="header-content">
         <img
           src="imagenes/Logo de Nova Motors.png"
@@ -28,7 +28,7 @@
         <p>Revisa tus selecciones de lujo</p>
       </div>
     </header>
-    <nav class="main-nav">
+    <nav class="main-nav"> <!-- Barra de navegación principal -->
       <a href="index.html" class="nav-link">CATÁLOGO DE AUTOS</a>
       <a href="financiacion.html" class="nav-link">FINANCIACIÓN</a>
       <a href="contacto.html" class="nav-link">CONTACTO</a>
@@ -36,12 +36,12 @@
         >CARRITO DE COMPRAS <span id="cant-prod">0</span></a
       >
     </nav>
-    <div class="container">
+    <div class="container">  <!-- Contenedor principal del contenido -->
       <main class="cart-content" id="carrito-content">
         <!-- Carrito dinámico generado por JS -->
       </main>
     </div>
-    <footer class="main-footer">
+    <footer class="main-footer"> <!-- Pie de página con información de contacto -->
       <p>
         Contacto: <a href="mailto:info@novamotors.com">info@novamotors.com</a> |
         Tel: +54 351 123456

@@ -1,3 +1,8 @@
+// ========================
+// Lista de productos
+// ========================
+// Cada objeto representa un auto de lujo con su nombre, descripción, categoría, marca, precio e imagen.
+
 const productos = [
   {
     nombre: "Porsche 911 Turbo",
@@ -243,27 +248,33 @@ const productos = [
     imagen: "lexus-lc-500.jpg",
   },
 ];
-
+// ========================
+// Función para mostrar detalle de un producto
+// ========================
 let mostrarDetalle = (id) => {
-  document.getElementById("detalle").style.display = "block";
-  document.getElementById("titulo-prod").innerText = productos[id].nombre;
-  document.getElementById("descr-prod").innerText = productos[id].description;
+  document.getElementById("detalle").style.display = "block"; // Muestra el modal o contenedor de detalles
+  document.getElementById("titulo-prod").innerText = productos[id].nombre; // Asigna nombre del producto
+  document.getElementById("descr-prod").innerText = productos[id].description; // Asigna descripción
   document.getElementById("precio-prod").innerText = formatPrice(
     productos[id].precio
-  );
+  ); // Asigna precio formateado
 };
-
+// ========================
+// Función para cerrar el modal de detalle
+// ========================
 let cerrarModal = () => {
-  document.getElementById("detalle").style.display = "none";
+  document.getElementById("detalle").style.display = "none"; // Oculta el modal
 };
-
+// ========================
+// Función para mostrar todos los productos en el catálogo
+// ========================
 let mostrarCatalogo = (prod) => {
   if (!prod) {
     prod = productos;
   }
 
   let contenido = "";
-
+// Crea dinámicamente el HTML de cada producto
   prod.forEach((prod, id) => {
     contenido += `<div>
             <img src="imagenes/${prod.imagen}" alt="${prod.nombre}" />
@@ -274,27 +285,31 @@ let mostrarCatalogo = (prod) => {
             <button type="button" onclick="agregarAlcarrito(${id})">Agregar al carrito</button>
         </div>`;
   });
-
+// Inserta todo en el contenedor del catálogo
   document.getElementById("catalog").innerHTML = contenido;
 };
-
+// ========================
+// Agregar producto al carrito (localStorage)
+// ========================
 let agregarAlcarrito = (id) => {
-  const listaInicial = JSON.parse(localStorage.getItem("carrito")) || [];
-  listaInicial.push(id);
-  localStorage.setItem("carrito", JSON.stringify(listaInicial));
-  contarProductos();
+  const listaInicial = JSON.parse(localStorage.getItem("carrito")) || []; // Recupera el carrito existente
+  listaInicial.push(id); // Agrega el id del producto
+  localStorage.setItem("carrito", JSON.stringify(listaInicial)); // Guarda el carrito actualizado
+  contarProductos(); // Actualiza contador en pantalla
 };
-
+// ========================
+// Mostrar el carrito con productos seleccionados
+// ========================
 let mostrarCarrito = () => {
   let contenido = "";
   let total = 0;
 
-  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];// Carga carrito
 
   if (carrito.length > 0) {
-    const listProd = [];
-    const listCant = [];
-
+    const listProd = []; // Lista de productos únicos
+    const listCant = []; // Cantidades de cada producto
+// Recorre el carrito y cuenta repeticiones
     carrito.forEach((num) => {
       if (!listProd.includes(num)) {
         listProd.push(num);
@@ -304,7 +319,7 @@ let mostrarCarrito = () => {
         listCant[inx] += 1;
       }
     });
-
+ // Genera contenido HTML del carrito
     listProd.forEach((num, id) => {
       const element = productos[num];
       contenido += `<div>
@@ -313,27 +328,31 @@ let mostrarCarrito = () => {
                 <p>Cantidad: ${listCant[id]}</p>
                 <button type="button" onclick="eliminarProducto(${id})">Eliminar producto</button>
             </div>`;
-      total += element.precio * listCant[id];
+      total += element.precio * listCant[id]; // Calcula total acumulado
     });
   }
   contenido += `<p>Total: ${formatPrice(total)}</p>`;
   if (carrito.length > 0) {
     contenido += `<button type="button" onclick="vaciarCarrito()">Vaciar carrito</button>`;
   }
-  document.getElementById("carrito-content").innerHTML = contenido;
+  document.getElementById("carrito-content").innerHTML = contenido; // Muestra todo
 };
-
+// ========================
+// Vaciar el carrito completamente
+// ========================
 let vaciarCarrito = () => {
-  localStorage.removeItem("carrito");
-  contarProductos();
-  window.location.reload();
+  localStorage.removeItem("carrito"); // Elimina el carrito
+  contarProductos(); // Reinicia contador
+  window.location.reload(); // Recarga la página
 };
-
+// ========================
+// Eliminar solo un producto del carrito
+// ========================
 let eliminarProducto = (indexEnLista) => {
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   if (carrito.length === 0) return;
 
-  // Reconstruir la lista única de productos (igual que en mostrarCarrito)
+  // Reconstruye la lista de productos únicos
   const listProd = [];
   carrito.forEach((num) => {
     if (!listProd.includes(num)) listProd.push(num);
@@ -342,7 +361,7 @@ let eliminarProducto = (indexEnLista) => {
   const prodId = listProd[indexEnLista];
   if (prodId === undefined) return;
 
-  // Eliminar solo UNA ocurrencia del producto
+  // Elimina una sola ocurrencia del producto
   const index = carrito.indexOf(prodId);
   if (index !== -1) {
     carrito.splice(index, 1);
@@ -357,7 +376,9 @@ let eliminarProducto = (indexEnLista) => {
   contarProductos();
   mostrarCarrito(); // refresca la vista
 };
-
+// ========================
+// Filtro de productos por nombre, precio, categoría y marca
+// ========================
 let filtrarProducto = () => {
   let searchWord = document.getElementById("search").value.toLowerCase();
   let min = document.getElementById("price-min").value || 0;
@@ -370,7 +391,7 @@ let filtrarProducto = () => {
   let marca = document.getElementById("marca").value;
 
   let newLista = productos;
-
+// Filtro por palabra clave
   if (searchWord) {
     newLista = newLista.filter(
       (prod) =>
@@ -378,11 +399,11 @@ let filtrarProducto = () => {
         prod.description.toLowerCase().includes(searchWord)
     );
   }
-
+// Filtro por rango de precios
   newLista = newLista.filter(
     (prod) => prod.precio >= min && prod.precio <= max
   );
-
+// Filtro por categoría seleccionada
   let category = [];
   if (dep) category.push("Deportivos");
   if (suv) category.push("SUV");
@@ -393,29 +414,35 @@ let filtrarProducto = () => {
   if (category.length > 0) {
     newLista = newLista.filter((prod) => category.includes(prod.categoria));
   }
-
+// Filtro por marca
   if (marca !== "Todas") {
     newLista = newLista.filter((prod) => prod.marca === marca);
   }
-
+// Muestra la lista filtrada
   mostrarCatalogo(newLista);
 };
-
+// ========================
+// Formatear precio a moneda local (USD en formato argentino)
+// ========================
 let formatPrice = (price) => {
   return new Intl.NumberFormat("es-AR", {
     style: "currency",
     currency: "USD",
   }).format(price);
 };
-
+// ========================
+// Contar cantidad de productos en carrito
+// ========================
 let contarProductos = () => {
   const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-  document.getElementById("cant-prod").innerText = carrito.length;
+  document.getElementById("cant-prod").innerText = carrito.length; // Muestra cantidad
 };
-
+// ========================
+// Ordenar catálogo según opción seleccionada
+// ========================
 let orderCatalog = () => {
   const opt = document.getElementById("order").value;
-  let newProductos = [...productos];
+  let newProductos = [...productos]; // Copia del array original
 
   switch (opt) {
     case "menor":
@@ -435,36 +462,44 @@ let orderCatalog = () => {
   }
   mostrarCatalogo(newProductos);
 };
-
+// ========================
+// Validar formulario de contacto
+// ========================
 let validarFormulario = () => {
   const nombre = document.getElementById("nombre").value.trim();
   const email = document.getElementById("email").value.trim();
   const mensaje = document.getElementById("mensaje").value.trim();
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar emails
+  // Validación de campos vacíos
   if (!nombre || !email || !mensaje) {
     document.getElementById("form-resultado").innerText =
       "Por favor, completa todos los campos requeridos.";
     return;
   }
+  // Validación de formato de email
   if (!emailRegex.test(email)) {
     document.getElementById("form-resultado").innerText =
       "Por favor, ingresa un email válido.";
     return;
   }
+  // Si todo está correcto, muestra mensaje de éxito
   document.getElementById("form-resultado2").innerText =
     "Mensaje enviado con éxito.";
   document.getElementById("form-resultado").innerText = "";
   document.getElementById("contact-form").reset();
 }
-
+// ========================
+// Calcular cuota mensual de financiación
+// ========================
 let calcularCuota = () => {
   const monto = parseFloat(document.getElementById("monto").value) || 0;
   const meses = parseInt(document.getElementById("meses").value) || 12;
   let tasa = 0;
+  // tasas según plazo
   if (meses === 24) tasa = 0.05;
   if (meses === 36) tasa = 0.07;
   const cuota = (monto * (1 + tasa)) / meses;
   document.getElementById(
     "resultado"
-  ).innerText = `Cuota mensual: ${formatPrice(cuota)}`;
+  ).innerText = `Cuota mensual: ${formatPrice(cuota)}`; // Muestra resultado
 }
