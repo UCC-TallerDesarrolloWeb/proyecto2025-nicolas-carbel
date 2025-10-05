@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concesionario de Autos de Lujo - Nova Motors</title>
+    <link rel="stylesheet" href="concesionario.css">
+    <link rel="icon" href="imagenes/Logo de Nova Motors.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="concesionario.js" defer></script>
+</head>
+<body class="grid-container" onload="mostrarCatalogo() ; contarProductos()">
+    <header class="hero">
+        <div class="header-content">
+            <img src="imagenes/Logo de Nova Motors.png" alt="Logo de novamotors" class="logo">
+            <h1>CONCESIONARIO DE AUTOS DE LUJO</h1>
+            <p>Experimenta la excelencia en cada curva</p>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link">CATÁLOGO DE AUTOS</a>
+        <a href="financiacion.html" class="nav-link">FINANCIACIÓN</a>
+        <a href="contacto.html" class="nav-link">CONTACTO</a>
+        <a href="carrito.html" class="nav-link">CARRITO DE COMPRAS <span id="cant-prod">0</span></a>
+    </nav>
+    <div class="container">
+        <aside class="filters" aria-label="Filtros de catálogo de autos">
+            <h2>Filtros</h2>
+            <div class="filter-section">
+                <h3>Búsqueda</h3>
+                <label for="search">Buscar:</label>
+                <input type="text" id="search" placeholder="Nombre o descripción" maxlength="50" oninput="filtrarProducto()">
+            </div>
+            <div class="filter-section">
+                <h3>Precios</h3>
+                <label for="price-min">Mínimo:</label>
+                <input type="number" id="price-min" placeholder="USD" min="0" oninput="filtrarProducto()">
+                <label for="price-max">Máximo:</label>
+                <input type="number" id="price-max" placeholder="USD" min="0" oninput="filtrarProducto()">
+            </div>
+            <div class="filter-section">
+                <h3>Tipos de autos</h3>
+                <label for="deportivos"><input type="checkbox" id="deportivos" onchange="filtrarProducto()"> Deportivos</label>
+                <label for="suv"><input type="checkbox" id="suv" onchange="filtrarProducto()"> SUV</label>
+                <label for="electricos"><input type="checkbox" id="electricos" onchange="filtrarProducto()"> Eléctricos</label>
+                <label for="superdeportivos"><input type="checkbox" id="superdeportivos" onchange="filtrarProducto()"> Superdeportivos</label>
+                <label for="hiperdeportivos"><input type="checkbox" id="hiperdeportivos" onchange="filtrarProducto()"> Hiperdeportivos</label>
+            </div>
+            <div class="filter-section">
+                
+                <label for="order"><h3>Ordenar por:</h3></label>
+                <select id="order" onchange="orderCatalog()">
+                    <option value="" disabled selected>Seleccione un orden</option>
+                    <option value="menor">Precio: menor a mayor</option>
+                    <option value="mayor">Precio: mayor a menor</option>
+                    <option value="a-z">Nombre: A-Z</option>
+                    <option value="z-a">Nombre: Z-A</option>
+                </select>
+            </div>
+            <div class="filter-section">
+                
+                <label for="marca"><h3>Marca</h3></label>
+                <select id="marca" onchange="filtrarProducto()">
+                    <option value="Todas">Todas</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Lamborghini">Lamborghini</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="McLaren">McLaren</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Aston Martin">Aston Martin</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Bugatti">Bugatti</option>
+                    <option value="Koenigsegg">Koenigsegg</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Rimac">Rimac</option>
+                    <option value="Dodge">Dodge</option>
+                    <option value="Alfa Romeo">Alfa Romeo</option>
+                    <option value="Lotus">Lotus</option>
+                    <option value="Pininfarina">Pininfarina</option>
+                    <option value="Maserati">Maserati</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Lexus">Lexus</option>
+                </select>
+            </div>
+        </aside>
+        <main class="catalog" id="catalog">
+            <!-- Catálogo dinámico generado por JS -->
+        </main>
+    </div>
+    <div id="detalle" class="modal">
+        <div class="modal-content">
+            <h2 id="titulo-prod"></h2>
+            <p id="descr-prod"></p>
+            <p id="precio-prod"></p>
+            <button type="button" onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <p>Contacto: <a href="">info@novamotors.com</a> | Tel: +54 351 123456</p>
+    </footer>
+</body>
+</html>

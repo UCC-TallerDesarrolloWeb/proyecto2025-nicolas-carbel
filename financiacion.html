@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financiación - Nova Motors</title>
+    <link rel="stylesheet" href="concesionario.css">
+    <link rel="icon" href="imagenes/Logo de Nova Motors.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="concesionario.js" defer></script>
+</head>
+<body onload="contarProductos()">
+    <header class="hero">
+        <div class="header-content">
+            <img src="imagenes/Logo de Nova Motors.png" alt="Logo Nova Motors" class="logo">
+            <h1>FINANCIACIÓN</h1>
+            <p>Planes flexibles para conducir tu sueño</p>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link">CATÁLOGO DE AUTOS</a>
+        <a href="financiacion.html" class="nav-link">FINANCIACIÓN</a>
+        <a href="contacto.html" class="nav-link">CONTACTO</a>
+        <a href="carrito.html" class="nav-link">CARRITO DE COMPRAS <span id="cant-prod">0</span></a>
+    </nav>
+    <div class="container">
+        <main class="financing-content">
+            <section>
+                <h2>Nuestros Planes de Financiación</h2>
+                <p>Ofrecemos planes personalizados con tasas competitivas para que puedas adquirir tu vehículo de lujo sin complicaciones.</p>
+                <ul>
+                    <li><strong>Plan 12 meses:</strong> 0% interés, cuotas fijas.</li>
+                    <li><strong>Plan 24 meses:</strong> Tasa preferencial del 5% anual.</li>
+                    <li><strong>Plan 36 meses:</strong> Flexibilidad con tasa del 7% anual.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Simulador de Cuotas</h2>
+                <label for="monto">Monto del vehículo (USD):</label>
+                <input type="number" id="monto" placeholder="Ej: 100000" min="0">
+                <label for="meses">Plazo (meses):</label>
+                <select id="meses">
+                    <option value="12">12 meses</option>
+                    <option value="24">24 meses</option>
+                    <option value="36">36 meses</option>
+                </select>
+                <button type="button" onclick="calcularCuota()">Calcular</button>
+                <p id="resultado"></p>
+            </section>
+        </main>
+    </div>
+    <footer class="main-footer">
+        <p>Contacto: <a href="mailto:info@novamotors.com">info@novamotors.com</a> | Tel: +54 351 123456</p>
+    </footer>
+</body>
+</html>

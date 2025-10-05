@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Nova Motors</title>
+    <link rel="stylesheet" href="concesionario.css">
+    <link rel="icon" href="imagenes/Logo de Nova Motors.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="concesionario.js" defer></script>
+</head>
+<body onload="contarProductos() ; mostrarCarrito()">
+    <header class="hero">
+        <div class="header-content">
+            <img src="imagenes/Logo de Nova Motors.png" alt="Logo Nova Motors" class="logo">
+            <h1>CARRITO DE COMPRAS</h1>
+            <p>Revisa tus selecciones de lujo</p>
+        </div>
+    </header>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-link">CATÁLOGO DE AUTOS</a>
+        <a href="financiacion.html" class="nav-link">FINANCIACIÓN</a>
+        <a href="contacto.html" class="nav-link">CONTACTO</a>
+        <a href="carrito.html" class="nav-link">CARRITO DE COMPRAS <span id="cant-prod">0</span></a>
+    </nav>
+    <div class="container">
+        <main class="cart-content" id="carrito-content">
+            <!-- Carrito dinámico generado por JS -->
+        </main>
+    </div>
+    <footer class="main-footer">
+        <p>Contacto: <a href="mailto:info@novamotors.com">info@novamotors.com</a> | Tel: +54 351 123456</p>
+    </footer>
+    
+</body>
+</html>
