@@ -314,7 +314,10 @@ let mostrarCarrito = () => {
         });
     }
     contenido += `<p>Total: ${formatPrice(total)}</p>`;
-    contenido += `<button type="button" onclick="vaciarCarrito()">Vaciar carrito</button>`;
+    if (carrito.length > 0)
+    {
+        contenido += `<button type="button" onclick="vaciarCarrito()">Vaciar carrito</button>`;
+    }
     document.getElementById("carrito-content").innerHTML = contenido;
 };
 
