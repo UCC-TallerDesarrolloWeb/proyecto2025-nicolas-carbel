@@ -42,8 +42,8 @@ Tener en cuenta:
       - Carpeta de Componentes
       - Carpeta de Pages
       - Carpeta de Styles
-- [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
-- [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
+- [X] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
+- [X] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
 - [X] Se debe emplear algún favicon
 - [X] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
 - [X] Debe haber navegación entre todas las páginas
@@ -51,7 +51,7 @@ Tener en cuenta:
 - [X] "Lorem ipsum" es sólo válido para los prototipos, NO para la página
 
 ### Sobre el HTML
-- [ ] Todas las etiquetas deben estar en minúscula
+- [X] Todas las etiquetas deben estar en minúscula
 - [X] Poner comillas a todos los atributos
 - [X] Title debe contener el título de la página
 - [ ] En el ```<head></head>``` incluir las etiquetas ```<meta>``` detallando: autor, descripcion y palabras clave

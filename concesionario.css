@@ -1,254 +1,389 @@
-:root{
-  --ferrari-red: #FF0000;
+:root {
+  --ferrari-red: #ff0000;
   --black: #000000;
-  --white: #FFFFFF;
-  --gold: #D4AF37;
+  --white: #ffffff;
+  --gold: #d4af37;
   --bg: #f5f6f7;
   --muted: #666;
 }
 
 /* Reset ligero */
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
   background: var(--bg);
   color: var(--black);
-  line-height:1.5;
-  -webkit-font-smoothing:antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* HERO */
-.hero{
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('imagenes/lamborghini-aventador-svj.jpg') no-repeat center/cover;
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("imagenes/lamborghini-aventador-svj.jpg") no-repeat center/cover;
   height: 320px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
   padding: 1rem;
 }
-.header-content{max-width:1100px}
-.logo{width:150px; height:auto; display:block; margin:0 auto 12px}
-.hero h1{font-size:2.2rem; font-weight:700; text-transform:uppercase; letter-spacing:1px}
-.hero p{font-style:italic; margin-top:6px}
+.header-content {
+  max-width: 1100px;
+}
+.logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 12px;
+}
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.hero p {
+  font-style: italic;
+  margin-top: 6px;
+}
 
 /* NAV */
-.main-nav{
+.main-nav {
   background-color: var(--ferrari-red);
   padding: 12px 10px;
   position: sticky;
-  top:0;
-  z-index:1100;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:8px;
-  flex-wrap:wrap;
+  top: 0;
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
-.main-nav .nav-link{
+.main-nav .nav-link {
   color: var(--white);
-  text-decoration:none;
-  padding:8px 14px;
-  margin:0 6px;
-  font-weight:700;
-  text-transform:uppercase;
-  transition: transform .18s ease, color .18s ease, background .18s ease;
-  border-radius:6px;
+  text-decoration: none;
+  padding: 8px 14px;
+  margin: 0 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform 0.18s ease, color 0.18s ease, background 0.18s ease;
+  border-radius: 6px;
 }
-.main-nav .nav-link:hover{ color:var(--gold); transform:scale(1.03) }
+.main-nav .nav-link:hover {
+  color: var(--gold);
+  transform: scale(1.03);
+}
 
 /* contador carrito */
-#cant-prod{
-  display:inline-block;
-  background:var(--gold);
-  color:var(--black);
-  border-radius:50%;
-  padding:4px 9px;
-  font-weight:700;
-  font-size:0.85rem;
-  margin-left:6px;
+#cant-prod {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  border-radius: 50%;
+  padding: 4px 9px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-left: 6px;
 }
 
 /* LAYOUT PRINCIPAL */
-.container{
-  max-width:1200px;
+.container {
+  max-width: 1200px;
   margin: 20px auto;
   padding: 0 16px;
-  display:flex;
-  gap:20px;
-  align-items:flex-start;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 /* FILTROS */
-.filters{
+.filters {
   width: 25%;
   background: var(--white);
   padding: 18px;
-  border-radius:10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  min-width:220px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  min-width: 220px;
 }
-.filters h2{color:var(--ferrari-red); margin-bottom:12px}
-.filter-section{margin-bottom:14px}
-.filter-section h3{color:var(--ferrari-red); margin-bottom:8px}
-.filters label{display:block; margin:6px 0}
+.filters h2 {
+  color: var(--ferrari-red);
+  margin-bottom: 12px;
+}
+.filter-section {
+  margin-bottom: 14px;
+}
+.filter-section h3 {
+  color: var(--ferrari-red);
+  margin-bottom: 8px;
+}
+.filters label {
+  display: block;
+  margin: 6px 0;
+}
 .filters input[type="text"],
 .filters input[type="number"],
-.filters select{
-  width:100%;
-  padding:8px 10px;
-  border:1px solid #ddd;
-  border-radius:6px;
-  margin-top:6px;
+.filters select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 6px;
 }
 
 /* CATALOGO */
-.catalog{
+.catalog {
   width: 75%;
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap:20px;
-  align-items:start; /* evita aplastamiento */
+  gap: 20px;
+  align-items: start; /* evita aplastamiento */
   transition: all 0.3s;
 }
 
 /* cada producto */
-.catalog > div{
+.catalog > div {
   background: var(--white);
-  border-radius:12px;
-  padding:14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  transition: transform .18s ease, box-shadow .18s ease;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
   min-height: 320px;
 }
-.catalog > div:hover{ transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,0.09) }
-
-.catalog img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-  border-radius:8px;
-  margin-bottom:12px;
+.catalog > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
 }
 
-.catalog h3{
-  font-size:1.15rem;
-  color:var(--ferrari-red);
-  margin-bottom:8px;
+.catalog img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
-.catalog p{ margin-bottom:6px; color:var(--muted) }
-
-.catalog button{
-  border:none;
-  padding:10px 12px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:700;
-  background:var(--ferrari-red);
-  color:var(--white);
-  transition:background .18s ease, transform .12s ease;
+.catalog h3 {
+  font-size: 1.15rem;
+  color: var(--ferrari-red);
+  margin-bottom: 8px;
 }
-.catalog button:hover{ background:var(--gold); color:var(--black); transform:translateY(-2px) }
+
+.catalog p {
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+.catalog button {
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  background: var(--ferrari-red);
+  color: var(--white);
+  transition: background 0.18s ease, transform 0.12s ease;
+}
+.catalog button:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-2px);
+}
 
 /* Altura según cantidad de productos */
-#catalog.uno .catalog > div { height: 450px; }
-#catalog.dos .catalog > div { height: 400px; }
-#catalog.muchos .catalog > div { height: auto; }
+#catalog.uno .catalog > div {
+  height: 450px;
+}
+#catalog.dos .catalog > div {
+  height: 400px;
+}
+#catalog.muchos .catalog > div {
+  height: auto;
+}
 
 /* FOOTER */
-.main-footer{
-  background:var(--black);
-  color:var(--white);
-  text-align:center;
-  padding:18px 10px;
-  margin-top:28px;
+.main-footer {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 18px 10px;
+  margin-top: 28px;
 }
-.main-footer a{ color:var(--gold); text-decoration:none }
+.main-footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
 
 /* MODAL */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background: rgba(0,0,0,0.65);
-  z-index:2000;
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 2000;
   padding: 30px 16px;
-  overflow:auto;
+  overflow: auto;
 }
-.modal-content{
-  max-width:520px;
+.modal-content {
+  max-width: 520px;
   margin: 6% auto;
   background: var(--white);
-  border-radius:10px;
-  padding:18px;
-  text-align:center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
-.modal-content h2{ margin-bottom:8px; color:var(--ferrari-red) }
-.modal-content p{ margin-bottom:10px }
-.modal-content button{
-  background:var(--ferrari-red);
-  color:var(--white);
-  border:none;
-  padding:10px 14px;
-  border-radius:8px;
-  cursor:pointer;
+.modal-content h2 {
+  margin-bottom: 8px;
+  color: var(--ferrari-red);
+}
+.modal-content p {
+  margin-bottom: 10px;
+}
+.modal-content button {
+  background: var(--ferrari-red);
+  color: var(--white);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 /* paginas internas */
-.cart-content, .financing-content, .contact-content{
-  background:var(--white);
-  width:100%;
-  padding:18px;
-  border-radius:10px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+.cart-content,
+.financing-content,
+.contact-content {
+  background: var(--white);
+  width: 100%;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 /* carrito */
-#carrito-content > div{ margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:12px }
-#carrito-content h3{ color:var(--ferrari-red) }
-
-/* formularios */
-.contact-content form label{ font-weight:700 }
-.contact-content input, .contact-content textarea{ margin-top:6px; padding:10px; border-radius:6px; border:1px solid #ddd; width:100%; }
-
-/* UTILS */
-.btn-secondary{ background:transparent; border:1px solid #ddd; padding:8px 12px; border-radius:8px; cursor:pointer }
-.hidden{ display:none !important }
-
-/* RESPONSIVE */
-@media (max-width: 992px){
-  .container{ padding: 0 14px; gap:14px }
-  .filters{ width: 30% }
-  .catalog{ width:70% }
+#carrito-content > div {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+}
+#carrito-content h3 {
+  color: var(--ferrari-red);
 }
 
-@media (max-width: 768px){
-  .container{ flex-direction:column; padding: 0 12px }
-  .filters, .catalog, .cart-content, .financing-content, .contact-content{ width:100% }
-  .filters{ order:2 }
-  .catalog{ order:1 }
-  .hero{ height: 240px }
-  .hero h1{ font-size:1.6rem }
-  .logo{ width:120px }
-  .main-nav{ padding:10px; gap:6px }
-  .main-nav .nav-link{ padding:8px 10px; font-size:0.9rem; margin:4px 2px }
-  .catalog > div{ min-height: auto }
-  .catalog img{ height: 180px }
+/* formularios */
+.contact-content form label {
+  font-weight: 700;
+}
+.contact-content input,
+.contact-content textarea {
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+/* UTILS */
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.hidden {
+  display: none !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 14px;
+    gap: 14px;
+  }
+  .filters {
+    width: 30%;
+  }
+  .catalog {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 0 12px;
+  }
+  .filters,
+  .catalog,
+  .cart-content,
+  .financing-content,
+  .contact-content {
+    width: 100%;
+  }
+  .filters {
+    order: 2;
+  }
+  .catalog {
+    order: 1;
+  }
+  .hero {
+    height: 240px;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .logo {
+    width: 120px;
+  }
+  .main-nav {
+    padding: 10px;
+    gap: 6px;
+  }
+  .main-nav .nav-link {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    margin: 4px 2px;
+  }
+  .catalog > div {
+    min-height: auto;
+  }
+  .catalog img {
+    height: 180px;
+  }
 }
 
 /* MUY PEQUEÑOS */
-@media (max-width:480px){
-  .hero{ height:200px }
-  .hero h1{ font-size:1.3rem }
-  .logo{ width:100px }
-  .catalog img{ height:150px }
-  #cant-prod{ font-size:0.75rem; padding:3px 7px }
+@media (max-width: 480px) {
+  .hero {
+    height: 200px;
+  }
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+  .logo {
+    width: 100px;
+  }
+  .catalog img {
+    height: 150px;
+  }
+  #cant-prod {
+    font-size: 0.75rem;
+    padding: 3px 7px;
+  }
 }
