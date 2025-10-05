@@ -1,3 +1,49 @@
+# Proyecto Consecionaria
+
+## Autores
+- Carbel, Nicolas
+
+## Link de Publicación
+[Concesionario de Autos de Lujo](https://github.com/UCC-TallerDesarrolloWeb/proyecto2025-nicolas-carbel)
+
+## Tecnologías Usadas
+- **HTML5**: Estructura semántica del sitio.
+- **CSS3**: Estilo inspirado en Ferrari, con diseño responsivo y animaciones.
+- **JavaScript**: Interactividad para catálogo, carrito, simulador de cuotas y formulario.
+- **Google Fonts**: Tipografía Montserrat para un look moderno.
+
+## Descripción de las Secciones
+- **Catálogo de Autos**: Listado dinámico con filtros por búsqueda, precio, categoría y marca. Incluye imágenes, precios y botones interactivos.
+- **Financiación**: Información sobre planes de financiación y simulador de cuotas interactivo.
+- **Contacto**: Formulario de contacto con validación de campos (nombre, email, mensaje).
+- **Carrito**: Visualización de productos seleccionados con opción de eliminar y vaciar.
+
+## Estructura del Proyecto
+```
+proyecto2025-nicolas-carbel/
+├── index.html
+├── carrito.html
+├── financiacion.html
+├── contacto.html
+├── concesionario.css
+├── concesionario.js
+├── imagenes/
+│   ├── logo.png
+│   ├── porsche911tsh.jpg
+│   ├── bmw-x5.jpg
+│   ├── lamborghini-aventador.jpg
+│   ├── bmw-i8.jpg
+│   ├── ...
+├── sketch/
+│   ├── sketch-desktop.png
+│   ├── sketch-mobile.png
+├── wireframe/
+│   ├── wireframe-desktop.png
+│   ├── wireframe-mobile.png
+└── README.markdown
+```
+
+
 # proyecto2025
 Estructura de Proyecto Taller de Desarrollo Web - 2025
 
@@ -26,7 +72,7 @@ Tener en cuenta:
 ### Sobre el Repositorio
 - [X] El proyecto debe estar subido al repositorio adecuado "Proyecto2025-ApellidoAlumno1-ApellidoAlumno2"
 - [ ] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
-- [ ] En el **readme.md** se debe emplear Markdown y aplicar negrita, titulo de orden 1, 2 y 3, link, items, tabla, index a cada sección
+- [X] En el **readme.md** se debe emplear Markdown y aplicar negrita, titulo de orden 1, 2 y 3, link, items, tabla, index a cada sección
 - [X] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
 - [ ] Publicar la Web empleando GitHubPages
 - [X] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc ni .DS_Store, en todo caso emplear **.gitignore**)
@@ -34,7 +80,7 @@ Tener en cuenta:
 ### Sobre el Proyecto General
 - [X] La página principal debe llamarse index
 - [X] NO está permitido descargar un TEMPLATE (diseño 100% desde cero)
-- [ ] La estructura del proyecto debe ser adecuada
+- [X] La estructura del proyecto debe ser adecuada
       - Crear una carpeta para las imágenes
       - Carpeta para los sketch
       - Carpeta para los mockups/Wireframes
@@ -54,15 +100,15 @@ Tener en cuenta:
 - [X] Todas las etiquetas deben estar en minúscula
 - [X] Poner comillas a todos los atributos
 - [X] Title debe contener el título de la página
-- [ ] En el ```<head></head>``` incluir las etiquetas ```<meta>``` detallando: autor, descripcion y palabras clave
+- [X] En el ```<head></head>``` incluir las etiquetas ```<meta>``` detallando: autor, descripcion y palabras clave
 - [X] Emplear al menos 3 etiquetas semánticas diferentes (header, nav, aside, main, section, article, footer)
 - [X] Emplear ```<header></header>```. En el contenido de la cabecera debe haber un título ```<h1></h1>```, puede tener color de fondo, algún logotipo, etc.
 - [X] Debe haber por lo menos una etiqueta ```<img>``` en la página.
 - [X] La estructura de la página debe estar definida con ```<div></div>```
 - [X] Debe contener al menos 3 elementos de tipo ```<input>``` o ```<select>``` ó ```<button>``` que le permitan al usuario ingresar valores para poder realizar un cálculo de un ejercicio.
-- [ ] Emplear el atributo [**placeholder**](U2_HTML_avanzado.html#/19) (mínimamente en 1 input)
+- [X] Emplear el atributo [**placeholder**](U2_HTML_avanzado.html#/19) (mínimamente en 1 input)
 - [ ] Emplear el atributo **size** para que el tamaño de los inputs sea prolijo
-- [ ] Emplear el atributo **maxlength** para que el usurario no pueda ingresar valores "muy grandes"
+- [ ] Emplear el atributo **maxlength** para que el usuario no pueda ingresar valores "muy grandes"
 - [X] No espaciar con excesivos ```<br>```. Utilizar márgenes, paddings, etc.
 - [X] La anidación de etiquetas HTML debe ser correcta.
 - [ ] No utilizar etiquetas deprecadas.
