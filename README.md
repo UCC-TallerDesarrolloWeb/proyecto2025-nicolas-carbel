@@ -111,7 +111,7 @@ Tener en cuenta:
 - [ ] Emplear el atributo **maxlength** para que el usuario no pueda ingresar valores "muy grandes"
 - [X] No espaciar con excesivos ```<br>```. Utilizar márgenes, paddings, etc.
 - [X] La anidación de etiquetas HTML debe ser correcta.
-- [ ] No utilizar etiquetas deprecadas.
+- [X] No utilizar etiquetas deprecadas.
 - [X] Todas las etiquetas deben estar correctamente cerradas
 - [X] Los ids de los elementos deben ser unívocos
 
@@ -140,11 +140,11 @@ Tener en cuenta:
 Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
 - [X] Una función que compruebe si los valores ingresados son correctos, y si no lo son, que le indique al usuario por un alert o dialog, y que blanquee el contenido del campo.
 - [X] Una función que calcule/muestre algo en base a los valores ingresados por el usuario en los inputs.
-- [ ] El código Js debe estar en un archivo externo
+- [X] El código Js debe estar en un archivo externo
 - [X] Se debe emplear var, let o const según corresponda para mayor eficiencia
 - [X] No deben existir funciones innecesarias que no se llamen en ninguna sección del código
-- [ ] Las funciones deben estar escritas cómo **función flecha**
-- [ ] No debe haber errores JavaScript presentes (F12 > Consola)
+- [X] Las funciones deben estar escritas cómo **función flecha**
+- [X] No debe haber errores JavaScript presentes (F12 > Consola)
 - [X] El funcionamiento de la página debe ser consistente.
 
 ### Sobre la documentación

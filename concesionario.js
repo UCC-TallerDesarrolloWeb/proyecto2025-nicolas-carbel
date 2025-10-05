@@ -436,7 +436,7 @@ let orderCatalog = () => {
   mostrarCatalogo(newProductos);
 };
 
-function validarFormulario() {
+let validarFormulario = () => {
   const nombre = document.getElementById("nombre").value.trim();
   const email = document.getElementById("email").value.trim();
   const mensaje = document.getElementById("mensaje").value.trim();
@@ -457,7 +457,7 @@ function validarFormulario() {
   document.getElementById("contact-form").reset();
 }
 
-function calcularCuota() {
+let calcularCuota = () => {
   const monto = parseFloat(document.getElementById("monto").value) || 0;
   const meses = parseInt(document.getElementById("meses").value) || 12;
   let tasa = 0;
