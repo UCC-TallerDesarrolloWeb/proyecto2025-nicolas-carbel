@@ -224,19 +224,6 @@ body {
 }
 
 /* -----------------------------------------------------
-   AJUSTE DE ALTURA SEGÚN CANTIDAD DE PRODUCTOS
-   ----------------------------------------------------- */
-#catalog.uno .catalog > div {
-  height: 450px;
-}
-#catalog.dos .catalog > div {
-  height: 400px;
-}
-#catalog.muchos .catalog > div {
-  height: auto;
-}
-
-/* -----------------------------------------------------
    PIE DE PÁGINA (FOOTER)
    ----------------------------------------------------- */
 .main-footer {
