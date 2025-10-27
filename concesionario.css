@@ -313,7 +313,7 @@ body {
 
 #form-resultado
 {
-  color: red;
+  color: var(--ferrari-red);
 }
 
 
