@@ -327,9 +327,6 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
-.hidden {
-  display: none !important;
-}
 
 /* -----------------------------------------------------
    MEDIA QUERIES: diseño responsive
