@@ -14,8 +14,8 @@
 
 | Nombre | Apellido |
 | :--- | :--- |
-| Tiziano | Nicolás |
-| Samir | Carbel |
+| Tiziano | **Nicolás** |
+| Samir | **Carbel** |
 ---
 
 ## 🔗 Link de Publicación
