@@ -534,23 +534,31 @@ let validarFormulario = () => {
   const nombre = document.getElementById("nombre").value.trim();
   const email = document.getElementById("email").value.trim();
   const mensaje = document.getElementById("mensaje").value.trim();
+  const resultadoP = document.getElementById("form-resultado");
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar emails
   // Validación de campos vacíos
+
+  //Limpiamos el atributo de error y el texto anterior
+    resultadoP.removeAttribute('data-error'); // <-- Quitamos el atributo de error
+    resultadoP.innerText = "";
+
   if (!nombre || !email || !mensaje) {
-    document.getElementById("form-resultado").innerText =
+    resultadoP.innerText =
       "Por favor, completa todos los campos requeridos.";
+      resultadoP.setAttribute('data-error', 'true'); // <-- Establecemos el atributo de error
     return;
   }
   // Validación de formato de email
   if (!emailRegex.test(email)) {
-    document.getElementById("form-resultado").innerText =
+    resultadoP.innerText =
       "Por favor, ingresa un email válido.";
+      resultadoP.setAttribute('data-error', 'true'); // <-- Establecemos el atributo de error
     return;
   }
   // Si todo está correcto, muestra mensaje de éxito
-  document.getElementById("form-resultado2").innerText =
+  resultadoP.innerText =
     "Mensaje enviado con éxito.";
-  document.getElementById("form-resultado").innerText = "";
+  
   document.getElementById("contact-form").reset();
 }
 // ========================

@@ -315,7 +315,7 @@ body {
   width: 100%;
 }
 
-#form-resultado
+#form-resultado[data-error="true"]
 {
   color: var(--ferrari-red);
 }
