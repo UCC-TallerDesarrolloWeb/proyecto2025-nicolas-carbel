@@ -536,23 +536,37 @@ let validarFormulario = () => {
   const mensaje = document.getElementById("mensaje").value.trim();
   const resultadoP = document.getElementById("form-resultado");
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar emails
-  // Validación de campos vacíos
+
+  const soloTexto = nombre.replace(/[0-9]/g, '');
+  
 
   //Limpiamos el atributo de error y el texto anterior
     resultadoP.removeAttribute('data-error'); // <-- Quitamos el atributo de error
     resultadoP.innerText = "";
 
+  
+
+  // Validación de campos vacíos
   if (!nombre || !email || !mensaje) {
     resultadoP.innerText =
       "Por favor, completa todos los campos requeridos.";
-      resultadoP.setAttribute('data-error', 'true'); // <-- Establecemos el atributo de error
+      resultadoP.setAttribute('data-error', 'true'); 
     return;
   }
+
+  // Validación para evitar números en el campo nombre
+  if (nombre !== soloTexto)
+  {
+    resultadoP.innerText = "El campo Nombre no puede contener números.";
+    resultadoP.setAttribute('data-error', 'true');
+    return;
+  }
+
   // Validación de formato de email
   if (!emailRegex.test(email)) {
     resultadoP.innerText =
       "Por favor, ingresa un email válido.";
-      resultadoP.setAttribute('data-error', 'true'); // <-- Establecemos el atributo de error
+      resultadoP.setAttribute('data-error', 'true'); 
     return;
   }
   // Si todo está correcto, muestra mensaje de éxito
