@@ -544,8 +544,6 @@ let validarFormulario = () => {
     resultadoP.removeAttribute('data-error'); // <-- Quitamos el atributo de error
     resultadoP.innerText = "";
 
-  
-
   // Validación de campos vacíos
   if (!nombre || !email || !mensaje) {
     resultadoP.innerText =

@@ -1,24 +1,51 @@
-# Proyecto Consecionaria
+# 🚀 Proyecto Concesionario de Autos de Lujo - Nova Motors
 
-## Autores
-- Carbel, Nicolas
+## 📖 Índice
 
-## Link de Publicación
+* [Autores](#autores)
+* [Link de Publicación](#link-de-publicación)
+* [Tecnologías Usadas](#tecnologías-usadas)
+* [Descripción de las Secciones](#descripción-de-las-secciones)
+* [Estructura del Proyecto](#estructura-del-proyecto)
+
+---
+
+## 🧑‍💻 Autores
+
+| Nombre | Apellido |
+| :--- | :--- |
+| Tiziano | Nicolás |
+| Samir | Carbel |
+---
+
+## 🔗 Link de Publicación
+
 [Concesionario de Autos de Lujo](https://github.com/UCC-TallerDesarrolloWeb/proyecto2025-nicolas-carbel)
 
-## Tecnologías Usadas
-- **HTML5**: Estructura semántica del sitio.
-- **CSS3**: Estilo inspirado en Ferrari, con diseño responsivo y animaciones.
-- **JavaScript**: Interactividad para catálogo, carrito, simulador de cuotas y formulario.
-- **Google Fonts**: Tipografía Montserrat para un look moderno.
+---
 
-## Descripción de las Secciones
-- **Catálogo de Autos**: Listado dinámico con filtros por búsqueda, precio, categoría y marca. Incluye imágenes, precios y botones interactivos.
-- **Financiación**: Información sobre planes de financiación y simulador de cuotas interactivo.
-- **Contacto**: Formulario de contacto con validación de campos (nombre, email, mensaje).
-- **Carrito**: Visualización de productos seleccionados con opción de eliminar y vaciar.
+## 💻 Tecnologías Usadas
 
-## Estructura del Proyecto
+* **HTML5**: Estructura semántica del sitio.
+* **CSS3**: Estilo inspirado en Ferrari, con diseño responsivo y animaciones.
+* **JavaScript**: Interactividad para catálogo, carrito, simulador de cuotas y formulario.
+* **Google Fonts**: Tipografía Montserrat para un look moderno.
+
+---
+
+## 📝 Descripción de las Secciones
+
+### 🔍 Funcionalidad del Catálogo
+
+El **Catálogo de Autos** es la sección principal. Permite un listado dinámico con filtros por búsqueda, precio, categoría y marca, mostrando imágenes, precios y botones interactivos para ver detalles y agregar al carrito.
+
+* **Financiación**: Información sobre planes de financiación y simulador de cuotas interactivo.
+* **Contacto**: Formulario de contacto con validación de campos (nombre, email, mensaje).
+* **Carrito**: Visualización de productos seleccionados con opción de eliminar y vaciar.
+
+---
+
+## 📂 Estructura del Proyecto
 ```
 proyecto2025-nicolas-carbel/
 ├── index.html
