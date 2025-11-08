@@ -566,6 +566,19 @@ let calcularCuota = () => {
   const meses = parseInt(document.getElementById("meses").value) || 12;
   let tasa = 0;
   // tasas según plazo
+  const resultadoP = document.getElementById("resultado");
+
+  //Limpiamos el atributo de error y el texto anterior
+    resultadoP.removeAttribute('data-error'); // <-- Quitamos el atributo de error
+    resultadoP.innerText = "";
+
+    //VALIDACIÓN PARA MONTO NEGATIVO/CERO
+    if (isNaN(monto) || monto <= 0) {
+        resultadoP.innerText = "Error: El monto del vehículo debe ser un número positivo.";
+        resultadoP.setAttribute('data-error', 'true'); // <-- Establecemos el atributo de error
+        return; // Detiene la ejecución
+    }
+
   if (meses === 24) tasa = 0.05;
   if (meses === 36) tasa = 0.07;
   const cuota = (monto * (1 + tasa)) / meses;

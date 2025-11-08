@@ -288,6 +288,10 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
+#resultado[data-error="true"] {
+    color: var(--ferrari-red);
+}
+
 /* Carrito de compras */
 #carrito-content > div {
   margin-bottom: 12px;
