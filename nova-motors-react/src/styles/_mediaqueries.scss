@@ -1,0 +1,80 @@
+/* -----------------------------------------------------
+  MEDIA QUERIES: diseño responsive
+  ----------------------------------------------------- */
+/* Pantallas medianas */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 14px;
+    gap: 14px;
+  }
+  .filters {
+    width: 30%;
+  }
+  .catalog {
+    width: 70%;
+  }
+}
+/* Pantallas pequeñas (tablets y móviles) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 0 12px;
+  }
+  .filters,
+  .catalog,
+  .cart-content,
+  .financing-content,
+  .contact-content {
+    width: 100%;
+  }
+  .filters {
+    order: 2;
+  }
+  .catalog {
+    order: 1;
+  }
+  .hero {
+    height: 240px;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .logo {
+    width: 120px;
+  }
+  .main-nav {
+    padding: 10px;
+    gap: 6px;
+  }
+  .main-nav .nav-link {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    margin: 4px 2px;
+  }
+  .catalog > div {
+    min-height: auto;
+  }
+  .catalog img {
+    height: 180px;
+  }
+}
+
+/* Pantallas muy pequeñas (celulares chicos) */
+@media (max-width: 480px) {
+  .hero {
+    height: 200px;
+  }
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+  .logo {
+    width: 100px;
+  }
+  .catalog img {
+    height: 150px;
+  }
+  #cant-prod {
+    font-size: 0.75rem;
+    padding: 3px 7px;
+  }
+}

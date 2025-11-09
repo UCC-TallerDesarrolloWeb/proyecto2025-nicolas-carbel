@@ -1,0 +1,145 @@
+/* -----------------------------------------------------
+  FILTROS LATERALES
+  ----------------------------------------------------- */
+.filters {
+  width: 25%;
+  background: var(--white);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  min-width: 220px;
+}
+.filters h2 {
+  color: var(--ferrari-red);
+  margin-bottom: 12px;
+}
+.filter-section {
+  margin-bottom: 14px;
+}
+.filter-section h3 {
+  color: var(--ferrari-red);
+  margin-bottom: 8px;
+}
+.filters label {
+  display: block;
+  margin: 6px 0;
+}
+.filters input[type="text"],
+.filters input[type="number"],
+.filters select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+/* -----------------------------------------------------
+  CATÁLOGO DE PRODUCTOS
+  ----------------------------------------------------- */
+.catalog {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  align-items: start; /* evita aplastamiento */
+  transition: all 0.3s;
+}
+
+/* cada producto */
+.catalog > div {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  min-height: 320px;
+}
+/* Cada tarjeta de producto */
+.catalog > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+}
+
+.catalog img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.catalog h3 {
+  font-size: 1.15rem;
+  color: var(--ferrari-red);
+  margin-bottom: 8px;
+}
+
+.catalog p {
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+.catalog button {
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  background: var(--ferrari-red);
+  color: var(--white);
+  transition: background 0.18s ease, transform 0.12s ease;
+}
+.catalog button:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+/* -----------------------------------------------------
+  PÁGINAS INTERNAS (carrito, financiamiento, contacto)
+  ----------------------------------------------------- */
+.cart-content,
+.financing-content,
+.contact-content {
+  background: var(--white);
+  width: 100%;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+#resultado[data-error="true"] {
+  color: var(--ferrari-red);
+}
+
+/* Carrito de compras */
+#carrito-content > div {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+}
+#carrito-content h3 {
+  color: var(--ferrari-red);
+}
+
+/* Formularios de contacto */
+.contact-content form label {
+  font-weight: 700;
+}
+.contact-content input,
+.contact-content textarea {
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+#form-resultado[data-error="true"] {
+  color: var(--ferrari-red);
+}

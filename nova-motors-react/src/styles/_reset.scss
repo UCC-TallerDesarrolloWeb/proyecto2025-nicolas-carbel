@@ -1,0 +1,20 @@
+/* -----------------------------------------------------
+  RESET LIGERO: quita márgenes y rellenos predeterminados
+  ----------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial; /* tipografía principal */
+  background: var(--bg); /* color de fondo general */
+  color: var(--black); /* color de texto principal */
+  line-height: 1.5; /* altura de línea legible */
+  -webkit-font-smoothing: antialiased; /* suavizado de texto */
+}

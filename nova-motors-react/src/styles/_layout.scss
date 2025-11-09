@@ -1,0 +1,108 @@
+/* -----------------------------------------------------
+  SECCIÓN HERO: imagen principal del encabezado
+  ----------------------------------------------------- */
+.hero {
+  /* IMPORTANTE: Esta imagen ("lamborghini-aventador-svj.jpg")
+    deberás moverla a la carpeta /public para que esta ruta funcione.
+    Los archivos en /public se acceden directamente con "/".
+  */
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("/lamborghini-aventador-svj.jpg") no-repeat center/cover;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 1rem;
+}
+.header-content {
+  max-width: 1100px; /* ancho máximo del contenido */
+}
+.logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 12px;
+}
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.hero p {
+  font-style: italic;
+  margin-top: 6px;
+}
+
+/* -----------------------------------------------------
+  NAVEGACIÓN PRINCIPAL (barra de menú)
+  ----------------------------------------------------- */
+.main-nav {
+  background-color: var(--ferrari-red);
+  padding: 12px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.main-nav .nav-link {
+  color: var(--white);
+  text-decoration: none;
+  padding: 8px 14px;
+  margin: 0 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform 0.18s ease, color 0.18s ease, background 0.18s ease;
+  border-radius: 6px;
+}
+.main-nav .nav-link:hover {
+  color: var(--gold);
+  transform: scale(1.03);
+}
+
+/* -----------------------------------------------------
+  CONTADOR DEL CARRITO
+  ----------------------------------------------------- */
+#cant-prod {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  border-radius: 50%;
+  padding: 4px 9px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-left: 6px;
+}
+
+/* -----------------------------------------------------
+  CONTENEDOR PRINCIPAL
+  ----------------------------------------------------- */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* -----------------------------------------------------
+  PIE DE PÁGINA (FOOTER)
+  ----------------------------------------------------- */
+.main-footer {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 18px 10px;
+  margin-top: 28px;
+}
+.main-footer a {
+  color: var(--gold);
+  text-decoration: none;
+}

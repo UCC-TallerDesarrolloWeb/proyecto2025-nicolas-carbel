@@ -1,0 +1,274 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Porsche 911 Turbo",
+      "description": "Deportivo de lujo con motor biturbo 3.8L, 650 CV.",
+      "categoria": "Deportivos",
+      "marca": "Porsche",
+      "precio": 250000,
+      "imagen": "porsche911tsh.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "BMW X5",
+      "description": "SUV premium con alto confort y tecnología avanzada.",
+      "categoria": "SUV",
+      "marca": "BMW",
+      "precio": 120000,
+      "imagen": "bmw-x5.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Lamborghini Aventador",
+      "description": "Superdeportivo con motor V12 y diseño icónico.",
+      "categoria": "Deportivos",
+      "marca": "Lamborghini",
+      "precio": 350000,
+      "imagen": "lamborghini-aventador.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "BMW i8",
+      "description": "Híbrido enchufable con diseño futurista y eficiencia.",
+      "categoria": "Eléctricos",
+      "marca": "BMW",
+      "precio": 180000,
+      "imagen": "bmw-i8.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Ferrari 488 Pista",
+      "description": "Potente V8 con diseño aerodinámico y rendimiento de pista.",
+      "categoria": "Superdeportivos",
+      "marca": "Ferrari",
+      "precio": 350000,
+      "imagen": "ferrari-488-pista.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Lamborghini Huracán Evo",
+      "description": "Motor V10 con diseño agresivo y tecnología avanzada.",
+      "categoria": "Superdeportivos",
+      "marca": "Lamborghini",
+      "precio": 280000,
+      "imagen": "lamborghini-huracan-evo.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Tesla Model S Plaid",
+      "description": "Eléctrico de alta potencia con aceleración récord.",
+      "categoria": "Eléctricos",
+      "marca": "Tesla",
+      "precio": 140000,
+      "imagen": "tesla-model-s-plaid.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "McLaren 720S",
+      "description": "Superdeportivo ligero con motor V8 y diseño futurista.",
+      "categoria": "Superdeportivos",
+      "marca": "McLaren",
+      "precio": 310000,
+      "imagen": "mclaren-720s.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Audi R8 V10",
+      "description": "Motor V10 atmosférico con un diseño elegante y dinámico.",
+      "categoria": "Deportivos",
+      "marca": "Audi",
+      "precio": 200000,
+      "imagen": "audi-r8-v10.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "Chevrolet Corvette Z06",
+      "description": "Motor V8 con rendimiento excepcional y diseño americano.",
+      "categoria": "Deportivos",
+      "marca": "Chevrolet",
+      "precio": 120000,
+      "imagen": "corvette-z06.jpg"
+    },
+    {
+      "id": 11,
+      "nombre": "Aston Martin DB11 AMR",
+      "description": "Elegancia británica con motor V12 y dinámica refinada.",
+      "categoria": "Deportivos",
+      "marca": "Aston Martin",
+      "precio": 250000,
+      "imagen": "aston-martin-db11-amr.jpg"
+    },
+    {
+      "id": 12,
+      "nombre": "Mercedes-AMG GT R",
+      "description": "Motor V8 biturbo con enfoque en rendimiento y agilidad.",
+      "categoria": "Deportivos",
+      "marca": "Mercedes-Benz",
+      "precio": 190000,
+      "imagen": "mercedes-amg-gt-r.jpg"
+    },
+    {
+      "id": 13,
+      "nombre": "Nissan GT-R Nismo",
+      "description": "Leyenda japonesa con motor V6 y tracción integral.",
+      "categoria": "Deportivos",
+      "marca": "Nissan",
+      "precio": 210000,
+      "imagen": "nissan-gt-r-nismo.jpg"
+    },
+    {
+      "id": 14,
+      "nombre": "Porsche Taycan Turbo S",
+      "description": "Eléctrico de alto rendimiento con aceleración instantánea.",
+      "categoria": "Eléctricos",
+      "marca": "Porsche",
+      "precio": 190000,
+      "imagen": "porsche-taycan-turbo-s.jpg"
+    },
+    {
+      "id": 15,
+      "nombre": "Ferrari SF90 Stradale",
+      "description": "Híbrido con motor V8 y tecnología de punta.",
+      "categoria": "Superdeportivos",
+      "marca": "Ferrari",
+      "precio": 500000,
+      "imagen": "ferrari-sf90-stradale.jpg"
+    },
+    {
+      "id": 16,
+      "nombre": "Lamborghini Aventador SVJ",
+      "description": "Motor V12 con diseño extremo y aerodinámica activa.",
+      "categoria": "Superdeportivos",
+      "marca": "Lamborghini",
+      "precio": 520000,
+      "imagen": "lamborghini-aventador-svj.jpg"
+    },
+    {
+      "id": 17,
+      "nombre": "Bugatti Chiron",
+      "description": "Hiperdeportivo con motor W16 y velocidad récord.",
+      "categoria": "Hiperdeportivos",
+      "marca": "Bugatti",
+      "precio": 3000000,
+      "imagen": "bugatti-chiron.jpg"
+    },
+    {
+      "id": 18,
+      "nombre": "Koenigsegg Jesko",
+      "description": "Hiperdeportivo con motor V8 y diseño aerodinámico extremo.",
+      "categoria": "Hiperdeportivos",
+      "marca": "Koenigsegg",
+      "precio": 2800000,
+      "imagen": "koenigsegg-jesko.jpg"
+    },
+    {
+      "id": 19,
+      "nombre": "McLaren Senna",
+      "description": "Superdeportivo optimizado para pista con motor V8.",
+      "categoria": "Superdeportivos",
+      "marca": "McLaren",
+      "precio": 1000000,
+      "imagen": "mclaren-senna.jpg"
+    },
+    {
+      "id": 20,
+      "nombre": "Ford Mustang Shelby GT500",
+      "description": "Muscle car con motor V8 sobrealimentado y diseño agresivo.",
+      "categoria": "Deportivos",
+      "marca": "Ford",
+      "precio": 80000,
+      "imagen": "ford-mustang-shelby-gt500.jpg"
+    },
+    {
+      "id": 21,
+      "nombre": "Jaguar F-Type SVR",
+      "description": "Motor V8 con diseño elegante y rendimiento dinámico.",
+      "categoria": "Deportivos",
+      "marca": "Jaguar",
+      "precio": 130000,
+      "imagen": "jaguar-f-type-svr.jpg"
+    },
+    {
+      "id": 22,
+      "nombre": "Rimac C_Two",
+      "description": "Hiperdeportivo eléctrico con potencia extrema y tecnología avanzada.",
+      "categoria": "Eléctricos",
+      "marca": "Rimac",
+      "precio": 2000000,
+      "imagen": "rimac-c-two.jpg"
+    },
+    {
+      "id": 23,
+      "nombre": "Dodge Viper ACR",
+      "description": "Motor V10 con enfoque en rendimiento en pista.",
+      "categoria": "Deportivos",
+      "marca": "Dodge",
+      "precio": 150000,
+      "imagen": "dodge-viper-acr.jpg"
+    },
+    {
+      "id": 24,
+      "nombre": "BMW M4 Competition",
+      "description": "Motor seis cilindros con diseño deportivo y tecnología moderna.",
+      "categoria": "Deportivos",
+      "marca": "BMW",
+      "precio": 90000,
+      "imagen": "bmw-m4-competition.jpg"
+    },
+    {
+      "id": 25,
+      "nombre": "Alfa Romeo Giulia Quadrifoglio",
+      "description": "Sedán deportivo con motor V6 y diseño italiano.",
+      "categoria": "Deportivos",
+      "marca": "Alfa Romeo",
+      "precio": 85000,
+      "imagen": "alfa-romeo-giulia-quadrifoglio.jpg"
+    },
+    {
+      "id": 26,
+      "nombre": "Lotus Evora GT",
+      "description": "Deportivo ligero con motor V6 y manejo excepcional.",
+      "categoria": "Deportivos",
+      "marca": "Lotus",
+      "precio": 100000,
+      "imagen": "lotus-evora-gt.jpg"
+    },
+    {
+      "id": 27,
+      "nombre": "Pininfarina Battista",
+      "description": "Hiperdeportivo eléctrico con potencia récord y diseño italiano.",
+      "categoria": "Eléctricos",
+      "marca": "Pininfarina",
+      "precio": 2500000,
+      "imagen": "pininfarina-battista.jpg"
+    },
+    {
+      "id": 28,
+      "nombre": "Maserati MC20",
+      "description": "Motor V6 con diseño elegante y rendimiento dinámico.",
+      "categoria": "Superdeportivos",
+      "marca": "Maserati",
+      "precio": 220000,
+      "imagen": "maserati-mc20.jpg"
+    },
+    {
+      "id": 29,
+      "nombre": "Toyota GR Supra",
+      "description": "Deportivo japonés con motor seis cilindros y diseño moderno.",
+      "categoria": "Deportivos",
+      "marca": "Toyota",
+      "precio": 60000,
+      "imagen": "toyota-gr-supra.jpg"
+    },
+    {
+      "id": 30,
+      "nombre": "Lexus LC 500",
+      "description": "Motor V8 con diseño futurista y confort de lujo.",
+      "categoria": "Deportivos",
+      "marca": "Lexus",
+      "precio": 110000,
+      "imagen": "lexus-lc-500.jpg"
+    }
+  ]
+}
