@@ -3,7 +3,7 @@ import '@styles/_pages.scss';
 
 // 1. Recibimos 'filters' (el estado) y 'onFilterChange' (el manejador)
 const Filters = ({ filters, onFilterChange }) => {
-  // 2. ¡Añadimos el 'return ()' que faltaba!
+  // 2. ¡Añadido el 'return ()' que faltaba!
   return (
     <aside className="filters" aria-label="Filtros de catálogo de autos">
       <h2>Filtros</h2>

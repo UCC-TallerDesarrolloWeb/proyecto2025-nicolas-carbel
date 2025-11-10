@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Header from '@components/Header';
 import { useCart } from '@context/CartContext'; // Importamos el hook del carrito
 import { getProducts } from '@api/products'; // Importamos la API de productos
@@ -6,7 +6,6 @@ import { formatPrice } from '@utils/formatters';
 import '@styles/_layout.scss';
 import '@styles/_pages.scss';
 
-// (Función flecha)
 const CartPage = () => {
   // 1. Obtenemos el estado y funciones del Contexto
   const { cartItems, clearCart, removeFromCart } = useCart();
@@ -18,6 +17,7 @@ const CartPage = () => {
   // 3. Cargamos TODOS los productos de la API
   useEffect(() => {
     const loadProducts = async () => {
+      setIsLoading(true);
       const data = await getProducts();
       setAllProducts(data);
       setIsLoading(false);
@@ -25,9 +25,8 @@ const CartPage = () => {
     loadProducts();
   }, []);
 
-  // 4. Lógica para procesar el carrito (migrada de tu JS)
-  // Esta función convierte los IDs (ej: [1, 1, 5]) en objetos (ej: [{...producto 1, cantidad: 2}, {...producto 5, cantidad: 1}])
-  const getProcessedCart = () => {
+  // 4. Lógica para procesar el carrito (usando useMemo)
+  const { cartDetails, total } = useMemo(() => {
     if (isLoading || allProducts.length === 0) {
       return { cartDetails: [], total: 0 };
     }
@@ -57,15 +56,10 @@ const CartPage = () => {
     });
 
     return { cartDetails, total };
-  };
+  }, [cartItems, allProducts, isLoading]); // Recalcula si el carrito o los productos cambian
 
-  const { cartDetails, total } = getProcessedCart();
-
-  // 5. Manejador para eliminar producto (la lógica es diferente)
-  // Tu JS eliminaba por el índice de la *lista procesada*, no por el ID
-  // React es más fácil: eliminamos por el índice del *array original*
+  // 5. Manejador para eliminar producto
   const handleRemoveItem = (idToRemove) => {
-    // Encontramos el *primer* índice de este ID en el array 'cartItems'
     const indexToRemove = cartItems.findIndex(id => id === idToRemove);
     if (indexToRemove !== -1) {
       removeFromCart(indexToRemove); // Llamamos a la función del context
@@ -96,7 +90,6 @@ const CartPage = () => {
               <p>{formatPrice(item.precio)}</p>
               <p>Cantidad: {item.cantidad}</p>
               
-              {/* Este botón ahora elimina UNA unidad de este producto */}
               <button type="button" onClick={() => handleRemoveItem(item.id)}>
                 Eliminar un producto
               </button>

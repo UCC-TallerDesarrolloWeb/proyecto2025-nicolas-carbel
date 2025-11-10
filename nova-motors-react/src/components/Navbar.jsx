@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 import '@styles/_layout.scss';
 
 // 1. Importamos nuestro hook 'useCart'
-import { useCart } from '@context/CartContext'; // <-- ¡NUEVO!
+import { useCart } from '@context/CartContext'; 
 
 const Navbar = () => {
   // 2. Usamos el hook para obtener la cantidad del carrito
-  const { cartCount } = useCart(); // <-- ¡NUEVO!
+  const { cartCount } = useCart(); 
 
   return (
     <nav className="main-nav">

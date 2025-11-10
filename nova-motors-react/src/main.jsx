@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-//
-// ¡CAMBIO AQUÍ! Importamos CartProvider SIN llaves {}
-//
-import CartProvider from '@context/CartContext'; 
+// 1. Importamos el proveedor CON LLAVES
+import { CartProvider } from '@context/CartContext'; 
 
 import App from './App.jsx';
 import CatalogPage from '@pages/CatalogPage';
