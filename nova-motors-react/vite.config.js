@@ -13,6 +13,8 @@ export default defineConfig({
       '@components': path.resolve('./src/components'),
       '@pages': path.resolve('./src/pages'),
       '@styles': path.resolve('./src/styles'),
+      '@utils': path.resolve('./src/utils'),
+      '@context': path.resolve('./src/context'),
     },
   },
 });
