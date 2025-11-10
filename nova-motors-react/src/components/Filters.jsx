@@ -1,12 +1,22 @@
 import React from 'react';
-import '@styles/_pages.scss';
+import '@styles/_pages.scss'; // Importa los estilos de la página
 
-// 1. Recibimos 'filters' (el estado) y 'onFilterChange' (el manejador)
+/**
+ * Renderiza el panel lateral de filtros del catálogo.
+ * Este es un "componente controlado", lo que significa que
+ * no maneja su propio estado. Recibe los valores actuales
+ * y la función para cambiarlos (onFilterChange) desde su componente padre (CatalogPage).
+ *
+ * @param {object} props - Las propiedades del componente.
+ * @param {object} props.filters - Un objeto que contiene los valores actuales de todos los filtros.
+ * @param {function} props.onFilterChange - La función manejadora (del padre) que se llama cada vez que un filtro cambia.
+ */
 const Filters = ({ filters, onFilterChange }) => {
-  // 2. ¡Añadido el 'return ()' que faltaba!
   return (
     <aside className="filters" aria-label="Filtros de catálogo de autos">
       <h2>Filtros</h2>
+      
+      {/* Sección de Búsqueda por Texto */}
       <div className="filter-section">
         <h3>Búsqueda</h3>
         <label htmlFor="search">Buscar:</label>
@@ -15,17 +25,18 @@ const Filters = ({ filters, onFilterChange }) => {
           id="search"
           placeholder="Nombre o descripción"
           maxLength="50"
-          value={filters.search}
-          onChange={onFilterChange}
+          value={filters.search} // El valor es controlado por el estado del padre
+          onChange={onFilterChange} // Llama a la función del padre al cambiar
         />
       </div>
 
+      {/* Sección de Filtros por Precio */}
       <div className="filter-section">
         <h3>Precios</h3>
         <label htmlFor="price-min">Mínimo:</label>
         <input
           type="number"
-          id="minPrice" // <-- ID debe coincidir con la key del estado
+          id="minPrice" // El ID coincide con la clave en el objeto 'filters' del padre
           placeholder="USD"
           min="0"
           value={filters.minPrice}
@@ -34,7 +45,7 @@ const Filters = ({ filters, onFilterChange }) => {
         <label htmlFor="price-max">Máximo:</label>
         <input
           type="number"
-          id="maxPrice" // <-- ID debe coincidir con la key del estado
+          id="maxPrice" // El ID coincide con la clave en el objeto 'filters' del padre
           placeholder="USD"
           min="0"
           value={filters.maxPrice}
@@ -42,13 +53,14 @@ const Filters = ({ filters, onFilterChange }) => {
         />
       </div>
 
+      {/* Sección de Filtros por Tipo (Checkboxes) */}
       <div className="filter-section">
         <h3>Tipos de autos</h3>
         <label htmlFor="deportivos">
           <input 
             type="checkbox" 
             id="deportivos"
-            checked={filters.deportivos}
+            checked={filters.deportivos} // 'checked' es controlado por el estado del padre
             onChange={onFilterChange}
           />
           Deportivos
@@ -91,11 +103,12 @@ const Filters = ({ filters, onFilterChange }) => {
         </label>
       </div>
 
+      {/* Sección de Ordenamiento (Select) */}
       <div className="filter-section">
         <label htmlFor="order"><h3>Ordenar por:</h3></label>
         <select 
           id="order" 
-          value={filters.order}
+          value={filters.order} // El valor es controlado por el estado del padre
           onChange={onFilterChange}
         >
           <option value="">Seleccione un orden</option>
@@ -106,11 +119,12 @@ const Filters = ({ filters, onFilterChange }) => {
         </select>
       </div>
 
+      {/* Sección de Filtro por Marca (Select) */}
       <div className="filter-section">
         <label htmlFor="marca"><h3>Marca</h3></label>
         <select 
           id="marca" 
-          value={filters.marca}
+          value={filters.marca} // El valor es controlado por el estado del padre
           onChange={onFilterChange}
         >
           <option value="Todas">Todas</option>

@@ -4,36 +4,46 @@ import { formatPrice } from '@utils/formatters'; // Importamos nuestro formatead
 import '@styles/_layout.scss'; 
 import '@styles/_pages.scss';
 
-// (Función flecha)
+/**
+ * Componente de página que muestra información de financiación
+ * y una calculadora simple de cuotas.
+ */
 const FinancingPage = () => {
-  // 1. Estado para los inputs
+  // Estado para el valor del input del monto del vehículo
   const [monto, setMonto] = useState('');
+  // Estado para el valor del select de los meses (plazo)
   const [meses, setMeses] = useState('12'); // Valor inicial de 12 meses
   
-  // 2. Estado para el resultado y el error
+  // Estado para almacenar el mensaje de resultado del cálculo
   const [resultado, setResultado] = useState('');
+  // Estado para almacenar el mensaje de error si la validación falla
   const [error, setError] = useState('');
 
-  // 3. Manejador del cálculo (migrado de tu JS)
+  /**
+   * Maneja el evento de clic del botón "Calcular".
+   * Valida los inputs y calcula la cuota mensual.
+   */
   const handleCalcular = () => {
+    // Convierte los valores de string a numéricos
     const montoNum = parseFloat(monto);
     const mesesNum = parseInt(meses);
-    let tasa = 0;
+    let tasa = 0; // Tasa de interés inicial (0% para 12 meses)
 
-    // VALIDACIÓN (migrada de tu JS)
+    // Validación de entrada
     if (isNaN(montoNum) || montoNum <= 0) {
       setError("Error: El monto del vehículo debe ser un número positivo.");
-      setResultado(''); // Limpiamos el resultado anterior
-      return;
+      setResultado(''); // Limpiamos el resultado anterior si hay error
+      return; // Detiene la ejecución de la función
     }
 
-    // Lógica de cálculo
-    if (mesesNum === 24) tasa = 0.05;
-    if (mesesNum === 36) tasa = 0.07;
+    // Lógica de negocio para asignar la tasa según el plazo
+    if (mesesNum === 24) tasa = 0.05; // 5% para 24 meses
+    if (mesesNum === 36) tasa = 0.07; // 7% para 36 meses
     
+    // Cálculo de la cuota (interés simple total dividido por meses)
     const cuota = (montoNum * (1 + tasa)) / mesesNum;
     
-    // Mostramos resultado y limpiamos error
+    // Muestra el resultado formateado y limpia cualquier error previo
     setResultado(`Cuota mensual: ${formatPrice(cuota)}`);
     setError('');
   };
@@ -47,6 +57,7 @@ const FinancingPage = () => {
       
       <div className="container">
         <main className="financing-content">
+          {/* Sección 1: Información estática de los planes */}
           <section>
             <h2>Nuestros Planes de Financiación</h2>
             <p>
@@ -64,10 +75,10 @@ const FinancingPage = () => {
             </ul>
           </section>
           
+          {/* Sección 2: Simulador interactivo */}
           <section>
             <h2>Simulador de Cuotas</h2>
             
-            {/* REQUISITO: Labels para todos los inputs */}
             <label htmlFor="monto">Monto del vehículo (USD):</label> 
             <input 
               type="number" 
@@ -76,6 +87,7 @@ const FinancingPage = () => {
               min="0" 
               max="999999999"
               value={monto}
+              // Actualiza el estado 'monto' en cada cambio
               onChange={(e) => setMonto(e.target.value)}
             />
             
@@ -83,6 +95,7 @@ const FinancingPage = () => {
             <select 
               id="meses" 
               value={meses}
+              // Actualiza el estado 'meses' en cada cambio
               onChange={(e) => setMeses(e.target.value)}
             >
               <option value="12">12 meses</option>
@@ -90,10 +103,12 @@ const FinancingPage = () => {
               <option value="36">36 meses</option>
             </select>
             
+            {/* El botón dispara la función de cálculo */}
             <button type="button" onClick={handleCalcular}>Calcular</button>
             
-            {/* Mostramos el resultado o el error */}
+            {/* Renderizado condicional del mensaje de error */}
             {error && <p id="resultado" data-error="true">{error}</p>}
+            {/* Renderizado condicional del mensaje de resultado */}
             {resultado && <p id="resultado">{resultado}</p>}
             
           </section>

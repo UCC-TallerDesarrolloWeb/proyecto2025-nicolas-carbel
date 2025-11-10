@@ -1,7 +1,10 @@
 import React from 'react';
-import '@styles/_layout.scss';
+import '@styles/_layout.scss'; // Importa los estilos de layout
 
-
+/**
+ * Renderiza el pie de página principal del sitio.
+ * Es un componente estático que muestra la información de contacto.
+ */
 const Footer = () => {
   return (
     <footer className="main-footer">
