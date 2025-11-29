@@ -21,7 +21,7 @@ const Modal = ({ show, onClose, title, children }) => {
     // Contenedor principal del modal (el fondo oscuro)
     // Asigna el evento 'onClose' al fondo para cerrar el modal al hacer clic fuera.
     // Se añade 'display: block' en línea para sobreescribir el 'display: none' del CSS.
-    <div className="modal" onClick={onClose} style={{ display: 'block' }}>
+    <div className="modal" onClick={onClose}>
       
       {/* Contenido visible del modal (la caja blanca) */}
       {/* Usamos e.stopPropagation() para evitar que un clic DENTRO del modal

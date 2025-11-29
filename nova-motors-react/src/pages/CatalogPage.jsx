@@ -114,7 +114,7 @@ const CatalogPage = () => {
     // Nota: .sort() muta el array, por eso trabajamos sobre una copia (tempProducts).
     switch (filters.order) {
       case 'menor': tempProducts.sort((a, b) => a.precio - b.precio); break;
-      case 'mayor': tempProducts.sort((a, b) => b.precio - b.precio); break;
+      case 'mayor': tempProducts.sort((a, b) => b.precio - a.precio); break;
       case 'a-z': tempProducts.sort((a, b) => a.nombre.localeCompare(b.nombre)); break;
       case 'z-a': tempProducts.sort((a, b) => b.nombre.localeCompare(a.nombre)); break;
       default: break;

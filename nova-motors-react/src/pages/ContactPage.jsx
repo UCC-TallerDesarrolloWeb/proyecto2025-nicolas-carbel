@@ -71,7 +71,7 @@ const ContactPage = () => {
     setErrors(newErrors);
   };
 
-  /**
+  /*
    * Maneja el envío (submit) del formulario.
    * Previene la recarga, ejecuta una validación final de todos los campos,
    * y si es válido, simula el envío y redirige al inicio.

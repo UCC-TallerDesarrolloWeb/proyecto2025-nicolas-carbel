@@ -9,20 +9,20 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
  * @property {number} cartCount - El número total de items en el carrito.
  */
 
-/**
+/*
  * Crea el contexto para el carrito de compras.
  * @type {React.Context<CartContextValue>}
  */
 const CartContext = createContext();
 
-/**
+/*
  * Hook personalizado (custom hook) para acceder fácilmente al contexto del carrito.
  * Proporciona una forma corta de usar `useContext(CartContext)`.
  * @returns {CartContextValue} El valor del contexto del carrito.
  */
 export const useCart = () => useContext(CartContext);
 
-/**
+/*
  * Componente Proveedor (Provider) que envuelve la aplicación
  * y gestiona el estado global del carrito.
  * @param {object} props
@@ -30,7 +30,7 @@ export const useCart = () => useContext(CartContext);
  */
 export const CartProvider = ({ children }) => {
   
-  /**
+  /*
    * Estado para almacenar los items del carrito (un array de IDs).
    * Utiliza una "inicialización perezosa" (lazy initialization) con una función
    * para leer el localStorage *solo una vez* cuando el componente se monta.

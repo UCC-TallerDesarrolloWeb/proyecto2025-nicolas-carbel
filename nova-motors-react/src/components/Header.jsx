@@ -1,7 +1,7 @@
 import React from 'react';
 import '@styles/_layout.scss'; // Importa los estilos de layout
 
-/**
+/*
  * Renderiza el encabezado principal (sección "hero") de una página.
  * Es un componente reutilizable que acepta un título y subtítulo dinámicos.
  *
@@ -16,7 +16,7 @@ const Header = ({ title, subtitle }) => {
         {/* El logo se carga desde la carpeta /public.
             La barra '/' al inicio de src apunta a la raíz de /public. */}
         <img
-          src="/Logo de Nova Motors.png"
+          src="/src/assets/Logo de Nova Motors.png"
           alt="Logo de Nova Motors"
           className="logo"
         />

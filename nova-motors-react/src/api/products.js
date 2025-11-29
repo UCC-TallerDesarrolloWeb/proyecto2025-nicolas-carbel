@@ -1,7 +1,7 @@
 // Define la URL base del endpoint de la API de productos
 const API_URL = 'http://localhost:3001/productos';
 
-/**
+/*
  * Obtiene la lista completa de productos desde el servidor.
  * Utiliza fetch y async/await para manejar la solicitud.
  * @returns {Promise<Array>} Una promesa que resuelve a un array de productos.
