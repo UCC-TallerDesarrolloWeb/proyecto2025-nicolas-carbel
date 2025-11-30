@@ -36,7 +36,7 @@ const Filters = ({ filters, onFilterChange }) => {
         <label htmlFor="price-min">Mínimo:</label>
         <input
           type="number"
-          id="price-min" // El ID coincide con la clave en el objeto 'filters' del padre
+          id="price-min" 
           placeholder="USD"
           min="0"
           value={filters.minPrice}
@@ -45,7 +45,7 @@ const Filters = ({ filters, onFilterChange }) => {
         <label htmlFor="price-max">Máximo:</label>
         <input
           type="number"
-          id="price-max" // El ID coincide con la clave en el objeto 'filters' del padre
+          id="price-max" 
           placeholder="USD"
           min="0"
           value={filters.maxPrice}
